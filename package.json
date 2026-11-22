@@ -1,0 +1,65 @@
+{
+  "name": "@flyman8080/dsh-token-budget",
+  "version": "0.1.2",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "tests",
+    "README.md",
+    "INTRO.md"
+  ],
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "test:e2e": "node tests/e2e.mjs",
+    "test:all": "node tests/all.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "description": "预算管理：按会话 / 任务 / 项目设置 Token 或金额预算，输入框下方实时显示用量，超限直接阻断输入。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "budget",
+    "token",
+    "cost",
+    "deepseek-harness"
+  ],
+  "license": "MIT",
+  "engines": {
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tfcheng80808080/dsh-token-budget.git",
+    "directory": "plugin"
+  },
+  "homepage": "https://github.com/tfcheng80808080/dsh-token-budget#readme",
+  "bugs": {
+    "url": "https://github.com/tfcheng80808080/dsh-token-budget/issues"
+  }
+}

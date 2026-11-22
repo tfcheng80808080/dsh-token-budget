@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Budget management",
+    "description": "Sets a token or money budget per conversation or task; shows a compact pill under the composer and opens a popover to adjust the limit. Input is blocked once the budget is exhausted."
+  }
+}

@@ -1,0 +1,17 @@
+- insert:
+    - id: token-budget
+      name: '@flyman8080/dsh-token-budget'
+      config:
+        enabled: true
+        scope: session
+        mode: token
+        tokenLimit: 50000
+        moneyLimit: 10
+        currency: '¥'
+        defaultPrice:
+          input: 2
+          output: 8
+          cacheRead: 0.5
+          cacheWrite: 2
+        prices: {}
+        blockOnExceed: true
